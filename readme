@@ -162,7 +162,7 @@ https://cdn.prod.website-files.com/677c6c9cc13874f7aa42b6f7/677c6c9cc13874f7aa42
                     "actions": [
                         {
                             "type": "Action.Submit",
-                            "title": "Submit Feedback",
+                            "title": "Submit",
                             "data": {
                                 "action": "submitFeedback"
                             }
