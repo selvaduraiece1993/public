@@ -14,8 +14,69 @@ https://cdn.prod.website-files.com/677c6c9cc13874f7aa42b6f7/677c6c9cc13874f7aa42
 
 
 
+-------------------Greetings---------------------------
 
-
+{
+  '$schema': "https://adaptivecards.io/schemas/adaptive-card.json",
+  type: "AdaptiveCard",
+  version: "1.5",
+  body: [
+    {
+      type: "ColumnSet",
+      columns: [
+        {
+          type: "Column",
+          width: "stretch",
+          spacing: "None"
+        },
+        {
+          type: "Column",
+          width: "auto",
+          items: [
+            {
+              type: "Image",
+              url: "https://www.altayer.com/themes/altayer/images/al-tayer-logo.jpg",
+              size: "Large"
+            }
+          ],
+          spacing: "Large"
+        }
+      ]
+    },
+    {
+      type: "Container",
+      items: [
+        {
+          type: "Image",
+          url: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='8' viewBox='0 0 600 8'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='0%'><stop offset='0%' style='stop-color:%23ff6900;stop-opacity:1'/><stop offset='25%' style='stop-color:%23ffd700;stop-opacity:1'/><stop offset='75%' style='stop-color:%23ffd700;stop-opacity:1'/><stop offset='90%' style='stop-color:%23ff8c33;stop-opacity:1'/><stop offset='100%' style='stop-color:%23ff6900;stop-opacity:1'/></linearGradient></defs><rect width='600' height='8' rx='4' fill='url(%23grad)'/><rect width='600' height='4' rx='4' fill='white' opacity='0.15'/></svg>",
+          size: "Stretch",
+          spacing: "None"
+        }
+      ],
+      spacing: "Small"
+    },
+    {
+      type: "Container",
+      bleed: true,
+      items: [
+        {
+          type: "TextBlock",
+          text: Concatenate("Hello, ",System.Bot.Name,", a virtual assistant. Just so you are aware, I sometimes use AI to answer your questions. If you provided a website during creation, try asking me about it! Next try giving me some more knowledge by setting up generative AI."),
+          wrap: true
+        }
+      ]
+    },
+    {
+      type: "ColumnSet",
+      columns: [
+        {
+          type: "Column",
+          width: "stretch"
+        }
+      ]
+    }
+  ]
+}
 
 -----------------------------------------
 https://github.com/microsoft/CopilotStudioSamples/tree/main/OnGeneratedResponse
