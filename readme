@@ -72,6 +72,106 @@ https://cdn.prod.website-files.com/677c6c9cc13874f7aa42b6f7/677c6c9cc13874f7aa42
         }
     ]
 }
+--------------------------Feedback---------------------------------
 
+{
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Was this answer helpful?",
+            "weight": "Bolder",
+            "wrap": true,
+            "size": "Medium"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://cdn-icons-png.flaticon.com/128/8866/8866659.png",
+                            "size": "Small",
+                            "selectAction": {
+                                "type": "Action.ToggleVisibility",
+                                "title": "Yes",
+                                "targetElements": [
+                                    "feedbackSection"
+                                ],
+                                "data": {
+                                    "feedback": "Yes"
+                                }
+                            },
+                            "width": "25px",
+                            "height": "25px"
+                        }
+                    ],
+                    "rtl": false,
+                    "spacing": "Medium"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://cdn-icons-png.flaticon.com/128/11144/11144602.png",
+                            "size": "Small",
+                            "selectAction": {
+                                "type": "Action.ToggleVisibility",
+                                "title": "No",
+                                "targetElements": [
+                                    "feedbackSection"
+                                ],
+                                "data": {
+                                    "feedback": "No"
+                                }
+                            },
+                            "width": "25px",
+                            "height": "25px"
+                        }
+                    ],
+                    "spacing": "Medium"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "feedbackSection",
+            "isVisible": false,
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Additional comments (optional):",
+                    "wrap": true,
+                    "spacing": "Medium"
+                },
+                {
+                    "type": "Input.Text",
+                    "id": "Comments",
+                    "placeholder": "Write your comments here...",
+                    "isMultiline": true
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Submit Feedback",
+                            "data": {
+                                "action": "submitFeedback"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
 -------------Thanks--------------------------
 https://github.com/microsoft/CopilotStudioSamples/tree/main/OnGeneratedResponse
